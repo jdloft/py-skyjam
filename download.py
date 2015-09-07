@@ -8,11 +8,7 @@ logging.basicConfig(filename='dl.log', level=logging.DEBUG)
 
 
 def fix(path):
-    # OSX:   : -> FULLWIDTH COLON (U+FF1A)
-    # OSX:   / -> : (translated as / in Cocoa)
-    # LINUX: / -> DIVISION SLASH (U+2215)
-
-    path = path.replace(':', " ")
+    path = path.replace(':', "")
     path = path.replace('/', '_')
     # path.replace('/', "\u2215")
 
