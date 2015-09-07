@@ -36,7 +36,7 @@ for songs in manager.get_uploaded_songs(True):
     for song in songs:
         count = count + 1
 
-        dartist = 'dl/%s' % fix(song['album_artist'] or song['artist'])
+        dartist = '%s/%s' % (os.path.expanduser("~/Music"), fix(song['album_artist'] or song['artist']))
         if not os.path.exists(dartist):
             os.mkdir(dartist)
 
