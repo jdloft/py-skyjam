@@ -12,7 +12,7 @@ def fix(path):
     # OSX:   / -> : (translated as / in Cocoa)
     # LINUX: / -> DIVISION SLASH (U+2215)
 
-    path = path.replace(':', "\uFF1A")
+    path = path.replace(':', " ")
     path = path.replace('/', '_')
     # path.replace('/', "\u2215")
 
