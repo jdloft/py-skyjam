@@ -44,7 +44,7 @@ for songs in manager.get_uploaded_songs(True):
         if not os.path.exists(dalbum):
             os.mkdir(dalbum)
 
-        fsong = '%s/%02d - %s.mp3' % (dalbum,
+        fsong = '%s/%02d %s.mp3' % (dalbum,
                                       song['track_number'],
                                       fix(song['title']))
 
